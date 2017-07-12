@@ -1,4 +1,4 @@
-# Amazon Dashボタンで今日は休みますメールや、HDDを消したりします
+# Amazon Dashボタンで「今日は休みます」メールや、HDDを消したりします
 
 Amazonのセールなどが行われると、Dash Buttonが100円という破格の値段で解放されます　　
 Wifiにボタンを押すとアクセスして、Amazon社に対してあらかじめハードウェアに紐づいている商品を購入するものです  
@@ -77,6 +77,11 @@ devices:
 メールを送るスクリプトはシェルでもRubyでもなんでもいいので好きなのを使うといいです  
 
 ## amazon-dashのボタンを監視させるソフトを常駐させる
+tmuxやscreenなどを使って、常駐させると良いでしょう  
+この時、amazon-dash.ymlは同一フォルダにある必要があります  
+```console
+$ sudo amazon-dash run
+```
 
 
 ## pythonでメールを送る
@@ -106,3 +111,9 @@ server.sendmail(fromaddr, toaddrs, msg)
 server.quit()
 print('正常に送信が終了しました')
 ```
+
+## 今回作ったコード
+
+[github](https://github.com/GINK03/amazon-dash-hack)
+
+## 参考文献
