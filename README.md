@@ -7,6 +7,13 @@ Wifiにボタンを押すとアクセスして、Amazon社に対してあらか�
 
 nodejsでやられている方が多いですが、私は簡単なことにはPythonをよく使うので、Pythonで簡単に構築できるので、構築します  
 
+## 必要用件
+- Amazon Dash Button
+- Bluetooth対応のiOS or Androidデバイス
+- Wifi環境
+- Linux or Unixマシン
+Amazon Dash Buttonの特徴から、ネットワークのAmazon　Dash Buttonの通信を検知するので自宅サーバがなければ運用できないです.Rasphberry PIとかいいかも  
+
 ## Amazon Dash Buttonの登録
 まずは、Amazon Dash Buttonを登録します　
 
