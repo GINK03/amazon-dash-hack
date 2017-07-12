@@ -1,0 +1,11 @@
+settings:
+  delay: 10
+devices:
+  50:f5:da:95:d2:24:
+    name: フルーツグラノーラ
+    user: gimpei
+    cmd: firefox
+  fc:a6:67:35:17:81:
+    name: ポカリスエット
+    user: gimpei
+    cmd: kwrite
