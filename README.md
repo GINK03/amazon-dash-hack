@@ -28,7 +28,7 @@ Amazon Dash Buttonの特徴から、ネットワークのAmazon　Dash Buttonの
 </p>
 
 <p align="center">
-  <img width="100%" src="https://bytebucket.org/snippets/nardtree/6k6prr/raw/aaf3704e30161630a8cc60c46fe8ecf63abd6967/dash2.png">
+  <img width="100%" src="https://bytebucket.org/snippets/nardtree/6k6prr/raw/488a7a6b7d7bb97b4fbce1f4fa96b4e23c0e28be/amazon-dash3.png">
 </p>
 
 ## amazon-dashモジュール
