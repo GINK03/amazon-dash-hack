@@ -1,11 +1,16 @@
-# Amazon Dashボタンで今日は休みますメールや、HDDを消したりします
+# Amazon Dashボタンで「今日は休みます」メールや、HDDを消したりします
 
 Amazonのセールなどが行われると、Dash Buttonが100円という破格の値段で解放されます　　
 Wifiにボタンを押すとアクセスして、Amazon社に対してあらかじめハードウェアに紐づいている商品を購入するものです  
 
 これを多少いじると、LinuxやUnixマシンで任意のコマンドを実行することができ、大変便利です  
 
-nodejsでやられている方が多いですが、私は簡単なことにはPythonをよく使うので、Pythonで構築します  
+<p align="center">
+  <img width="450px" src="https://bytebucket.org/snippets/nardtree/6k6prr/raw/c6dc1c58e02318a62a4697d7b5f0e72b2b0ac1d2/IMG_5513.JPG">
+</p>
+<div align="center"> 箱とかおしゃれ　</div>
+
+nodejsでやられている方が多いですが、私は簡単なことにはPythonをよく使うので、Pythonで構築します  
 
 ## 必要用件
 - Amazon Dash Button
@@ -69,6 +74,15 @@ devices:
     user: bob
     cmd: /home/bob/sdb/amazon-dush-hack/amazon-dash-hack/scripts/attendance.py
 ```
+メールを送るスクリプトはシェルでもRubyでもなんでもいいので好きなのを使うといいです  
+
+## amazon-dashのボタンを監視させるソフトを常駐させる
+tmuxやscreenなどを使って、常駐させると良いでしょう  
+この時、amazon-dash.ymlは同一フォルダにある必要があります  
+```console
+$ sudo amazon-dash run
+```
+
 
 ## pythonでメールを送る
 本題ではないですが、gmailのSMTPサーバ経由で、「今日は会社を休みます」のメールを送ります  
@@ -78,8 +92,8 @@ devices:
 #! /usr/bin/python3
 import smtplib
 
-SECRET = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/opt/google_account1').read().split('\n') ) ) }
-MAILS  = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/opt/mailaddrs').read().split('\n') ) ) }
+SECRET = { x:y for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/opt/google_account1').read().split('\n') ) ) }
+MAILS  = { x:y for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/opt/mailaddrs').read().split('\n') ) ) }
 
 msg = bytes("""
 体調不良により、本日お休みをいただきたく思います。
@@ -97,3 +111,9 @@ server.sendmail(fromaddr, toaddrs, msg)
 server.quit()
 print('正常に送信が終了しました')
 ```
+
+## 今回作ったコード
+
+[github](https://github.com/GINK03/amazon-dash-hack)
+
+## 参考文献
