@@ -12,7 +12,7 @@ nodejsでやられている方が多いですが、私は簡単なことにはPy
 - Bluetooth対応のiOS or Androidデバイス
 - Wifi環境
 - Linux or Unixマシン
-Amazon Dash Buttonの特徴から、ネットワークのAmazon　Dash Buttonの通信を検知するので自宅サーバがなければ運用できないです.Rasphberry PIとかいいかも  
+Amazon Dash Buttonの特徴から、ネットワークのAmazon　Dash Buttonの通信を検知するので自宅サーバがなければ運用できないです。Rasphberry PIとかいいかも  
 
 ## Amazon Dash Buttonの登録
 まずは、Amazon Dash Buttonを登録します　
@@ -68,4 +68,31 @@ devices:
     name: ポカリスエット
     user: bob
     cmd: /home/bob/sdb/amazon-dush-hack/amazon-dash-hack/scripts/attendance.py
+```
+
+## pythonでメールを送る
+本題ではないですが、gmailのSMTPサーバ経由で、「今日は会社を休みます」のメールを送ります　　
+(正しいパスワードの運用はあまりわからないので、簡易的に別ファイルに、userid, password, mailaddressを保存してそこを参照しています)
+```python
+#! /usr/bin/python3
+import smtplib
+
+SECRET = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/home/gimpei/private_configs/google_account1').read().split('\n') ) ) }
+MAILS = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/home/gimpei/private_configs/mailaddrs').read().split('\n') ) ) }
+
+msg = bytes("""
+体調不良により、本日お休みをいただきたく思います。
+どうぞよろしくお願いします。
+""", 'utf8')
+fromaddr = SECRET['GOOGLE_ACC']
+toaddrs  = MAILS['KINTAI'] 
+
+username = SECRET['GOOGLE_ACC']
+password = SECRET['GOOGLE_PWD']
+server = smtplib.SMTP('smtp.gmail.com:587')
+server.starttls()
+server.login(username,password)
+server.sendmail(fromaddr, toaddrs, msg)
+server.quit()
+print('正常に送信が終了しました')
 ```
