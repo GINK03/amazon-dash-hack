@@ -31,8 +31,23 @@ Pypiにはamazon-dashモジュールが公開されており、yml形式で命�
 $ sudo pip3 install amazon-dash
 ```
 
-YML形式はこのようになっており、amazon-dashボタンごとにユニークなMACアドレスが振られていて、それを指定して、コマンドを記述できます  
+まず、Amazon Dash ButtonのMACアドレスを調べます  
+このアドレスに紐づけて後述のymlで動作を指定しますので、メモ帳に記録しておきます  
+```console
+$ sudo amazon-dash discovery
+20:3c:ae:66:d8:02
+c0:25:a2:f4:62:b0
+fc:a6:67:35:17:81 <- ボタンを押して直後に現れたMACアドレスが該当のAamazon Dash Button
+...
+```
 
+命令をYML形式のファイルを作成し、rootのオーナーに変更します
+```console
+$ touch amazon-dash.yml
+$ sudo chown root:root amazon-dash.yml
+```
+
+YMLはこのようになっており、amazon-dashボタン毎にユニークなMACアドレスが振られていて、それを指定して、コマンドを記述できます  
 今回は、今日は会社休みますメール（ポカリスエットのダッシュボタン）と、ホームフォルダ以下を全消去するコマンド（フルグラのダッシュボタンの設定です）
 ```yml
 settings:
