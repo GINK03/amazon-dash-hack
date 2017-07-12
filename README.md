@@ -19,7 +19,7 @@ nodejsでやられている方が多いですが、私は簡単なことにはPy
 - Linux or Unixマシン
 Amazon Dash Buttonの特徴から、ネットワークのAmazon　Dash Buttonの通信を検知するので自宅サーバがなければ運用できないです。Rasphberry PIとかいいかも  
 
-注：MacOSの場合は、libpcap, libdnetをbrew等で入れたあと、scapyのコードを編集する必要があります（参考文献参照）  
+注：MacOSの場合は、libpcap, libdnetをbrewで入れたあと、scapyのコードを編集する必要があります（参考文献参照）  
 
 ## Amazon Dash Buttonの登録
 まずは、Amazon Dash Buttonを登録します　
@@ -58,7 +58,7 @@ fc:a6:67:35:17:81 <- ボタンを押して直後に現れたMACアドレスが�
 命令をYML形式のファイルを作成し、rootのオーナーに変更します
 ```console
 $ touch amazon-dash.yml
-$ sudo chown root:root amazon-dash.yml
+$ sudo chown root:root amazon-dash.yml # MacOSの場合は sudo chown root amazon-dash.yml
 ```
 
 YMLはこのようになっており、amazon-dashボタン毎にユニークなMACアドレスが振られていて、それを指定して、コマンドを記述できます  
@@ -113,6 +113,10 @@ server.sendmail(fromaddr, toaddrs, msg)
 server.quit()
 print('正常に送信が終了しました')
 ```
+## GetWildもできます
+全く元ネタがわからないのですが、簡単にできます  
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/sHwSLWZdJII/0.jpg)](http://www.youtube.com/watch?v=sHwSLWZdJII)
+
 
 ## 今回作ったコード
 
