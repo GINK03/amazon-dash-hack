@@ -5,7 +5,12 @@ Wifiにボタンを押すとアクセスして、Amazon社に対してあらか�
 
 これを多少いじると、LinuxやUnixマシンで任意のコマンドを実行することができ、大変便利です  
 
-nodejsでやられている方が多いですが、私は簡単なことにはPythonをよく使うので、Pythonで構築します  
+<p align="center">
+  <img width="450px" src="https://bytebucket.org/snippets/nardtree/6k6prr/raw/c6dc1c58e02318a62a4697d7b5f0e72b2b0ac1d2/IMG_5513.JPG">
+</p>
+<div align="center"> 箱とかおしゃれ　</div>
+
+nodejsでやられている方が多いですが、私は簡単なことにはPythonをよく使うので、Pythonで構築します  
 
 ## 必要用件
 - Amazon Dash Button
