@@ -69,6 +69,10 @@ devices:
     user: bob
     cmd: /home/bob/sdb/amazon-dush-hack/amazon-dash-hack/scripts/attendance.py
 ```
+メールを送るスクリプトはシェルでもRubyでもなんでもいいので好きなのを使うといいです  
+
+## amazon-dashのボタンを監視させるソフトを常駐させる
+
 
 ## pythonでメールを送る
 本題ではないですが、gmailのSMTPサーバ経由で、「今日は会社を休みます」のメールを送ります  
@@ -78,8 +82,8 @@ devices:
 #! /usr/bin/python3
 import smtplib
 
-SECRET = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/opt/google_account1').read().split('\n') ) ) }
-MAILS  = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/opt/mailaddrs').read().split('\n') ) ) }
+SECRET = { x:y for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/opt/google_account1').read().split('\n') ) ) }
+MAILS  = { x:y for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/opt/mailaddrs').read().split('\n') ) ) }
 
 msg = bytes("""
 体調不良により、本日お休みをいただきたく思います。
