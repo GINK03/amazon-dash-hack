@@ -17,8 +17,9 @@ nodejsでやられている方が多いですが、私は簡単なことにはPy
 - Bluetooth対応のiOS or Androidデバイス
 - Wifi環境
 - Linux or Unixマシン
-Amazon Dash Buttonの特徴から、ネットワークのAmazon　Dash Buttonの通信を検知するので自宅サーバがなければ運用できないです。Rasphberry PIとかいいかも  
-注：MacOSの場合は、libpcap, libdnetをbrew等で入れたあと、scapyのコードを編集する必要があります（参考文献参照）
+Amazon Dash Buttonの特徴から、ネットワークのAmazon　Dash Buttonの通信を検知するので自宅サーバがなければ運用できないです。Rasphberry PIとかいいかも  
+
+注：MacOSの場合は、libpcap, libdnetをbrew等で入れたあと、scapyのコードを編集する必要があります（参考文献参照）  
 
 ## Amazon Dash Buttonの登録
 まずは、Amazon Dash Buttonを登録します　
