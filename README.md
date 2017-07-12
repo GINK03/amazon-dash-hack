@@ -71,8 +71,9 @@ devices:
 ```
 
 ## pythonでメールを送る
-本題ではないですが、gmailのSMTPサーバ経由で、「今日は会社を休みます」のメールを送ります　　
-(正しいパスワードの運用はあまりわからないので、簡易的に別ファイルに、userid, password, mailaddressを保存してそこを参照しています)
+本題ではないですが、gmailのSMTPサーバ経由で、「今日は会社を休みます」のメールを送ります  
+
+(正しいパスワードの運用はあまりわからないので、簡易的に別ファイルに、userid, password, mailaddressを保存してそこを参照しています)  
 ```python
 #! /usr/bin/python3
 import smtplib
