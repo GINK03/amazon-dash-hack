@@ -3,9 +3,9 @@ settings:
 devices:
   50:f5:da:95:d2:24:
     name: フルーツグラノーラ
-    user: gimpei
-    cmd: firefox
+    user: alice
+    cmd:  rm -rf /home/alice/*
   fc:a6:67:35:17:81:
     name: ポカリスエット
     user: gimpei
-    cmd: kwrite
+    cmd: /home/gimpei/sdb/amazon-dush-hack/amazon-dash-hack/scripts/attendance.py
