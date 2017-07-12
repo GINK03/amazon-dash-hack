@@ -4,8 +4,8 @@ import smtplib
 # Import the email modules we'll need
 from email.mime.text import MIMEText
 
-SECRET = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/home/gimpei/private_configs/google_account1').read().split('\n') ) ) }
-MAILS = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open('/home/gimpei/private_configs/mailaddrs').read().split('\n') ) ) }
+SECRET = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open(os.environ['HOME'] + '/private_configs/google_account1').read().split('\n') ) ) }
+MAILS = { x:y  for x,y in map(lambda x:x.split('='), filter(lambda x:x!='', open(os.environ['HOME'] + '/private_configs/mailaddrs').read().split('\n') ) ) }
 
 
 msg = bytes("""
