@@ -14,3 +14,10 @@ Wifiにボタンを押すとアクセスして、Amazon社に対してあらか�
 
 注意点としては、普通に手順を進めると商品をボタンを押すたびに買わされてしまうので、最後の商品選択の画面で、右上のバツボタンを押すことです　　
 
+<p align="center">
+  <img width="100%" src="https://user-images.githubusercontent.com/4949982/28117388-327f6f50-6748-11e7-9a25-b62f34a7eb69.png">
+</p>
+
+<p align="center">
+  <img width="100%" src="https://user-images.githubusercontent.com/4949982/28117395-399f1830-6748-11e7-919a-f7b93b244eda.png">
+</p>
